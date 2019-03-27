@@ -42,9 +42,9 @@ Optimizer: Adam
 
 Loss: L1 Loss
 
-Input: Jpeg Compressed RGB Image(Compression Quality:10, compressed by PIL(Python Image Library))
+Input: Compressed JPEG Image(Compression Quality:10, compressed by PIL(Python Image Library)) / RGB
 
-Output: Original RGB Image
+Output: Original Image / RGB
 
 Epoch: 200
 
