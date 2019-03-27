@@ -8,7 +8,7 @@ PyTorch implementation of Deep Convolution Network based on [EDSR](https://arxiv
 
 ## Network Architecture
 
-I removed upsampling layer in EDSR used to get higher resolution image.
+I removed upsampling layer in EDSR used for upsamling the image.
 
 ![fig1_EDAR_EXAMPLE](https://user-images.githubusercontent.com/35001605/55075459-60df9680-50d6-11e9-8ce9-1b56c0dbf6cb.png)
 
