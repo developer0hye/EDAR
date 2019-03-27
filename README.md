@@ -7,4 +7,4 @@ PyTorch implementation of Deep Convolution Networks for Compression Artifacts Re
 
 ![fig2_AR_0hyeNet](https://user-images.githubusercontent.com/35001605/55053576-fdd30d00-509f-11e9-8c85-7efcff08f164.png)
 
-<img src="https://user-images.githubusercontent.com/35001605/55053579-01ff2a80-50a0-11e9-98dc-fba126665f88.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/35001605/55056900-dd5c8000-50aa-11e9-9b6e-2d6b88f21467.png" width="400" height="200" />
