@@ -34,3 +34,20 @@ Input: Jpeg Compressed RGB Image(Compression Quality:10, compressed by PIL(Pytho
 Output: Original RGB Image
 
 Epoch: 2000
+
+## How to train
+
+```
+python train.py --images_dir [Your training image path] --outputs_dir ./ --jpeg_quality [10 to 100] --batch_size [num] --num_epochs [num]
+```
+
+Pre-trained model trained using the below arguments.
+```
+python train.py --images_dir ../DIV2K_train_HR --outputs_dir ./ --jpeg_quality 10 --batch_size 16 --num_epochs 2000
+```
+
+## How to test
+
+```
+python test.py --weights_path [your trained weight].pth --image_path [your_image] --outputs_dir ./
+```
