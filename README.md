@@ -1,5 +1,5 @@
-# AR_0hyeNet
-PyTorch implementation of Deep Convolution Networks for Compression Artifacts Reduction
+# EDAR
+PyTorch implementation of Deep Convolution Networks for Compression Artifacts Reduction based on [EDSR](https://arxiv.org/abs/1707.02921) 
 
 ## Requirements
 - PyTorch
@@ -8,6 +8,8 @@ PyTorch implementation of Deep Convolution Networks for Compression Artifacts Re
 - Pillow
 
 ## Network Architecture
+
+I modified last layer in EDSR.
 
 ![fig1_AR_EXAMPLE](https://user-images.githubusercontent.com/35001605/55053564-f27fe180-509f-11e9-9d26-8fd01b684b56.png)
 
