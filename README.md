@@ -20,3 +20,17 @@ PyTorch implementation of Deep Convolution Networks for Compression Artifacts Re
 ## Training
 
 Dataset: DIV 2K train set
+
+Batch size: 16
+
+Patch size: 48x48
+
+Optimizer: Adam
+
+Loss: L1 Loss
+
+Input: Jpeg Compressed RGB Image(Compression Quality:10, compressed by PIL(Python Image Library))
+
+Output: Original RGB Image
+
+Epoch: 2000
