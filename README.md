@@ -1,6 +1,12 @@
 # AR_0hyeNet
 PyTorch implementation of Deep Convolution Networks for Compression Artifacts Reduction
 
+## Requirements
+- PyTorch
+- tqdm
+- Numpy
+- Pillow
+
 ## Network Architecture
 
 ![fig1_AR_EXAMPLE](https://user-images.githubusercontent.com/35001605/55053564-f27fe180-509f-11e9-9d26-8fd01b684b56.png)
