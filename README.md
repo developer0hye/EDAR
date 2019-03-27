@@ -22,7 +22,13 @@ I removed upsampling layer in EDSR used for upsamling the image.
 
 ![fig4_bettertomorrow](https://user-images.githubusercontent.com/35001605/55057007-3af0cc80-50ab-11e9-872b-525bdd8b7480.png)
 
+![fig4_goorinimage](https://user-images.githubusercontent.com/35001605/55075978-9d5fc200-50d7-11e9-91a3-92d3a0a7dcfa.png)
+
+![fig4_bridge](https://user-images.githubusercontent.com/35001605/55076144-0ba48480-50d8-11e9-8381-f3e4417a4f53.png)
+
 ![fig4_navi](https://user-images.githubusercontent.com/35001605/55057501-b69f4900-50ac-11e9-8e5a-f810feb63034.png)
+
+
 
 ## Training
 
@@ -50,7 +56,7 @@ python train.py --images_dir [Your training image path] --outputs_dir ./ --jpeg_
 
 Pre-trained model trained using the below arguments.
 ```
-python train.py --images_dir ../DIV2K_train_HR --outputs_dir ./ --jpeg_quality 10 --batch_size 16 --num_epochs 2000
+python train.py --images_dir ../DIV2K_train_HR --outputs_dir ./ --jpeg_quality 10 --batch_size 16 --num_epochs 200
 ```
 
 ## How to test
