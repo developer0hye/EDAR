@@ -28,10 +28,7 @@ class Dataset(object):
 
         # additive jpeg noise
         buffer = io.BytesIO()
-        if random.randrange(0,101) > 95 :
-            label.save(buffer, format='jpeg', quality=100)
-        else :
-            label.save(buffer, format='jpeg', quality=self.jpeg_quality)
+        label.save(buffer, format='jpeg', quality=random.range(self.jpeg_quality+1))
 
         input = Image.open(buffer).convert('RGB')
 
