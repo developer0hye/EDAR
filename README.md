@@ -1,13 +1,18 @@
-# AR_0hyeNet
-PyTorch implementation of Deep Convolution Networks for Compression Artifacts Reduction
+# EDAR
+PyTorch implementation of Deep Convolution Network based on [EDSR](https://arxiv.org/abs/1707.02921) for Compression Artifacts Reduction 
+
+## Requirements
+- PyTorch
+- tqdm
+- Pillow
 
 ## Network Architecture
 
-![fig1_AR_EXAMPLE](https://user-images.githubusercontent.com/35001605/55053564-f27fe180-509f-11e9-9d26-8fd01b684b56.png)
+![fig1_EDAR_EXAMPLE](https://user-images.githubusercontent.com/35001605/55075459-60df9680-50d6-11e9-8ce9-1b56c0dbf6cb.png)
 
-![fig2_AR_0hyeNet](https://user-images.githubusercontent.com/35001605/55053576-fdd30d00-509f-11e9-8c85-7efcff08f164.png)
+![fig2_EDAR](https://user-images.githubusercontent.com/35001605/55075467-65a44a80-50d6-11e9-9d4c-3a40944d79b3.png)
 
-<img src="https://user-images.githubusercontent.com/35001605/55056900-dd5c8000-50aa-11e9-9b6e-2d6b88f21467.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/35001605/55075829-49ed7400-50d7-11e9-8179-ebabded17437.png" width="400" height="200" />
 
 ## Visual Results
 
@@ -15,7 +20,13 @@ PyTorch implementation of Deep Convolution Networks for Compression Artifacts Re
 
 ![fig4_bettertomorrow](https://user-images.githubusercontent.com/35001605/55057007-3af0cc80-50ab-11e9-872b-525bdd8b7480.png)
 
+![fig4_goorinimage](https://user-images.githubusercontent.com/35001605/55075978-9d5fc200-50d7-11e9-91a3-92d3a0a7dcfa.png)
+
+![fig4_bridge](https://user-images.githubusercontent.com/35001605/55076144-0ba48480-50d8-11e9-8381-f3e4417a4f53.png)
+
 ![fig4_navi](https://user-images.githubusercontent.com/35001605/55057501-b69f4900-50ac-11e9-8e5a-f810feb63034.png)
+
+
 
 ## Training
 
@@ -29,8 +40,25 @@ Optimizer: Adam
 
 Loss: L1 Loss
 
-Input: Jpeg Compressed RGB Image(Compression Quality:10, compressed by PIL(Python Image Library))
+Input: Compressed JPEG Image(Compression Quality:10, compressed by PIL(Python Image Library)) / RGB
 
-Output: Original RGB Image
+Output: Original Image / RGB
 
-Epoch: 2000
+Epoch: 200
+
+## How to train
+
+```
+python train.py --images_dir [Your training image path] --outputs_dir ./ --jpeg_quality [10 to 100] --batch_size [num] --num_epochs [num]
+```
+
+Pre-trained model trained using the below arguments.
+```
+python train.py --images_dir ../DIV2K_train_HR --outputs_dir ./ --jpeg_quality 10 --batch_size 16 --num_epochs 200
+```
+
+## How to test
+
+```
+python test.py --weights_path [your trained weight].pth --image_path [your_image] --outputs_dir ./
+```
