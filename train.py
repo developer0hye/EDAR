@@ -2,9 +2,7 @@ import argparse
 import os
 
 from dataset import Dataset
-from ar_0hyenet import AR_0hyeNet
-from ar_rcan import RCAN
-from edsr import EDAR
+from edar import EDAR
 
 import torch
 from torch import nn
@@ -95,7 +93,7 @@ if __name__ == '__main__':
                 loss = criterion(outs, labels)
                 #perception_loss = criterion(loss_network(outs), loss_network(labels))
 
-                #loss = loss + perception_loss*0.0001
+                #loss = loss + perception_loss*0.06
 
                 epoch_losses.update(loss.item(), len(inputs))
 
@@ -107,4 +105,4 @@ if __name__ == '__main__':
                 _tqdm.set_postfix(loss='{:.6f}'.format(epoch_losses.avg))
                 _tqdm.update(len(inputs))
 
-        torch.save(model.state_dict(), os.path.join(opt.outputs_dir, '{}_epoch_{}.pth'.format("EDAR", epoch)))
+        torch.save(model.state_dict(), os.path.join(opt.outputs_dir, '{}_epoch_{}.pth'.format("EDAR_Augmentation", epoch)))

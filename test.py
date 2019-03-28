@@ -5,9 +5,8 @@ import torch
 import torch.backends.cudnn as cudnn
 from torchvision import transforms
 import PIL.Image as pil_image
-from ar_0hyenet import AR_0hyeNet
-from edsr import EDAR
-from ar_rcan import RCAN
+
+from edar import EDAR
 
 cudnn.benchmark = True
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -52,6 +51,3 @@ if __name__ == '__main__':
     pred = pred.mul_(255.0).clamp_(0.0, 255.0).squeeze(0).permute(1, 2, 0).byte().cpu().numpy()
     output = pil_image.fromarray(pred, mode='RGB')
     output.save(os.path.join(opt.outputs_dir, '{}_{}.png'.format(filename, "AR_RCAN")))
-
-    #python test.py --weights_path YHSR_epoch_199.pth --image_path 0810.png --outputs_dir ./
-    #python train.py --images_dir ../DIV2K_train_HR --outputs_dir ./ --jpeg_quality 40
