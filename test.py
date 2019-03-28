@@ -5,12 +5,8 @@ import torch
 import torch.backends.cudnn as cudnn
 from torchvision import transforms
 import PIL.Image as pil_image
-<<<<<<< HEAD
 
 from edar import EDAR
-=======
-from ar_0hyenet import AR_0hyeNet
->>>>>>> a10f627eccd54a352dddaab534372689f5d7e4a8
 
 cudnn.benchmark = True
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -26,7 +22,7 @@ if __name__ == '__main__':
     if not os.path.exists(opt.outputs_dir):
         os.makedirs(opt.outputs_dir)
 
-    model = AR_0hyeNet()
+    model = EDAR()
 
     state_dict = model.state_dict()
     for n, p in torch.load(opt.weights_path, map_location=lambda storage, loc: storage).items():
@@ -54,8 +50,5 @@ if __name__ == '__main__':
 
     pred = pred.mul_(255.0).clamp_(0.0, 255.0).squeeze(0).permute(1, 2, 0).byte().cpu().numpy()
     output = pil_image.fromarray(pred, mode='RGB')
-<<<<<<< HEAD
-    output.save(os.path.join(opt.outputs_dir, '{}_{}.png'.format(filename, "AR_RCAN")))
-=======
-    output.save(os.path.join(opt.outputs_dir, '{}_{}.png'.format(filename, "AR_0hyeNet")))
->>>>>>> a10f627eccd54a352dddaab534372689f5d7e4a8
+    output.save(os.path.join(opt.outputs_dir, '{}_{}.png'.format(filename, "EDAR")))
+
