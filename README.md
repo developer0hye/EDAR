@@ -40,13 +40,13 @@ Optimizer: Adam
 
 Loss: L1 Loss
 
-Input: Compressed Image by JPEG (jpeg_quality: 10) / RGB
+Input: Compressed Image by JPEG (jpeg_quality: rand(0 to 10)) / RGB
 
 Output: Original Image / RGB
 
 Epoch: 200
 
-[Pre-trained weight]()
+[Pre-trained weight](https://drive.google.com/open?id=1DO_bqUqH5QmekV68dR-8p5Gsj4sCics3)
 
 ## How to train
 
@@ -54,7 +54,7 @@ Epoch: 200
 python train.py --images_dir [Your training image path] --outputs_dir ./ --jpeg_quality [10 to 100] --batch_size [num] --num_epochs [num]
 ```
 
-Pre-trained model trained using the below arguments.
+Pre-trained model was trained using the below arguments.
 ```
 python train.py --images_dir ../DIV2K_train_HR --outputs_dir ./ --jpeg_quality 10 --batch_size 16 --num_epochs 200
 ```
