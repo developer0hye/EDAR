@@ -49,7 +49,7 @@ if __name__ == '__main__':
     torch.manual_seed(opt.seed)
 
     transforms_train = transforms.Compose([transforms.ToTensor()])
-    model = AR_0hyeNet().to(device)
+    model = EDAR().to(device)
 
     if opt.resume:
         if os.path.isfile(opt.resume):
@@ -70,8 +70,6 @@ if __name__ == '__main__':
                             num_workers=opt.threads,
                             pin_memory=True,
                             drop_last=True)
-
-    print(device)
 
     vgg = vgg16(pretrained=True).cuda()
     loss_network = nn.Sequential(*list(vgg.features)[:31]).eval()
