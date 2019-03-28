@@ -40,7 +40,7 @@ Optimizer: Adam
 
 Loss: L1 Loss
 
-Input: Compressed JPEG Image(Compression Quality:10, compressed by PIL(Python Image Library)) / RGB
+Input: Compressed Image by JPEG (jpeg_quality: 10) / RGB
 
 Output: Original Image / RGB
 
