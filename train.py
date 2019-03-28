@@ -2,11 +2,7 @@ import argparse
 import os
 
 from dataset import Dataset
-<<<<<<< HEAD
 from edar import EDAR
-=======
-from ar_0hyenet import AR_0hyeNet
->>>>>>> a10f627eccd54a352dddaab534372689f5d7e4a8
 
 import torch
 from torch import nn
@@ -109,8 +105,5 @@ if __name__ == '__main__':
                 _tqdm.set_postfix(loss='{:.6f}'.format(epoch_losses.avg))
                 _tqdm.update(len(inputs))
 
-<<<<<<< HEAD
-        torch.save(model.state_dict(), os.path.join(opt.outputs_dir, '{}_epoch_{}.pth'.format("EDAR_Augmentation", epoch)))
-=======
-        torch.save(model.state_dict(), os.path.join(opt.outputs_dir, '{}_epoch_{}.pth'.format("AR_0hyeNet", epoch)))
->>>>>>> a10f627eccd54a352dddaab534372689f5d7e4a8
+        torch.save(model.state_dict(), os.path.join(opt.outputs_dir, '{}_epoch_{}.pth'.format("EDAR_", epoch)))
+
