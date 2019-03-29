@@ -16,13 +16,13 @@ PyTorch implementation of Deep Convolution Network based on [EDSR](https://arxiv
 
 ## Visual Results
 
-![fig4_bettertomorrow2](https://user-images.githubusercontent.com/35001605/55057005-39270900-50ab-11e9-8985-cf74f324af11.png)
+![fig4_bettertomorrow2_better](https://user-images.githubusercontent.com/35001605/55233222-3ffc7a00-526b-11e9-89e2-7d06af04dc54.png)
 
-![fig4_bettertomorrow](https://user-images.githubusercontent.com/35001605/55057007-3af0cc80-50ab-11e9-872b-525bdd8b7480.png)
+![fig4_bettertomorrow_better](https://user-images.githubusercontent.com/35001605/55233220-3d9a2000-526b-11e9-8220-e2801fe43257.png)
 
 ![fig4_goorinimage](https://user-images.githubusercontent.com/35001605/55075978-9d5fc200-50d7-11e9-91a3-92d3a0a7dcfa.png)
 
-![fig4_bridge](https://user-images.githubusercontent.com/35001605/55076144-0ba48480-50d8-11e9-8381-f3e4417a4f53.png)
+![fig4_bridge](https://user-images.githubusercontent.com/35001605/55233363-b305f080-526b-11e9-8c71-54001cb51ec9.png)
 
 ![fig4_iu](https://user-images.githubusercontent.com/35001605/55232466-032f8380-5269-11e9-904d-af1dafa6075e.png)
 
