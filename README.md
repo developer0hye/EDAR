@@ -24,13 +24,17 @@ PyTorch implementation of Deep Convolution Network based on [EDSR](https://arxiv
 
 ![fig4_bridge](https://user-images.githubusercontent.com/35001605/55076144-0ba48480-50d8-11e9-8381-f3e4417a4f53.png)
 
+![fig4_iu](https://user-images.githubusercontent.com/35001605/55232466-032f8380-5269-11e9-904d-af1dafa6075e.png)
+
+![fig4_ronaldo](https://user-images.githubusercontent.com/35001605/55232475-088cce00-5269-11e9-8c52-c0184140c764.png)
+
 ![fig4_navi](https://user-images.githubusercontent.com/35001605/55057501-b69f4900-50ac-11e9-8e5a-f810feb63034.png)
 
 
 
 ## Training
 
-Dataset: DIV 2K train set
+Dataset: DIV 2K train set + ...(custom dataset...)
 
 Batch size: 16
 
