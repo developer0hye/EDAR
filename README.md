@@ -52,7 +52,7 @@ Output: Original Image / RGB
 
 Epoch: 200
 
-[Pre-trained weight](https://drive.google.com/open?id=1DO_bqUqH5QmekV68dR-8p5Gsj4sCics3)
+[Pre-trained weight](https://drive.google.com/open?id=1p8yzQIWPPtS6DoVOSCggTvN5_OoK5fVH)
 
 ## How to train
 
