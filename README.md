@@ -8,7 +8,7 @@ PyTorch implementation of Deep Convolution Network based on [EDSR](https://arxiv
 
 ## Network Architecture
 
-![fig1_EDAR_EXAMPLE](https://user-images.githubusercontent.com/35001605/55075459-60df9680-50d6-11e9-8ce9-1b56c0dbf6cb.png)
+![fig1_EDAR_EXAMPLE](https://user-images.githubusercontent.com/35001605/55232723-b7310e80-5269-11e9-8d28-9d3268f6170f.png)
 
 ![fig2_EDAR](https://user-images.githubusercontent.com/35001605/55075467-65a44a80-50d6-11e9-9d4c-3a40944d79b3.png)
 
