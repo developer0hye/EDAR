@@ -50,7 +50,7 @@ Input: Compressed Image by JPEG (jpeg_quality: rand(0 to 10)) / RGB
 
 Output: Original Image / RGB
 
-Epoch: 200
+Epoch: 450
 
 [Pre-trained weight](https://drive.google.com/open?id=1p8yzQIWPPtS6DoVOSCggTvN5_OoK5fVH)
 
