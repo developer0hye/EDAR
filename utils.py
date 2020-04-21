@@ -24,7 +24,5 @@ class MeanShift(nn.Conv2d):
         print(self.weight.data.size())
         self.bias.data = sign * torch.Tensor(rgb_mean)
         self.requires_grad = False
-
-
     #python test.py --weights_path YHSR_epoch_199.pth --image_path 0810.png --outputs_dir ./
     #python train.py --images_dir ../DIV2K_train_HR --outputs_dir ./ --jpeg_quality 40

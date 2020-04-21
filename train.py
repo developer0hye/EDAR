@@ -36,7 +36,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--num_epochs', type=int, default=400)
     parser.add_argument('--lr', type=float, default=1e-4)
-    parser.add_argument('--threads', type=int, default=8)
+    parser.add_argument('--threads', type=int, default=1)
     parser.add_argument('--seed', type=int, default=123)
     parser.add_argument('--resume', default='', type=str, metavar='PATH',
                         help='path to latest checkpoint (default: none)')
@@ -50,6 +50,7 @@ if __name__ == '__main__':
 
     transforms_train = transforms.Compose([transforms.ToTensor()])
     model = EDAR().to(device)
+    print("Model loaded")
 
     if opt.resume:
         if os.path.isfile(opt.resume):
@@ -62,7 +63,8 @@ if __name__ == '__main__':
 
     criterion = nn.L1Loss()
     optimizer = optim.Adam(model.parameters(), lr=opt.lr)
-
+    print("Data processing started")
+    
     dataset = Dataset(opt.images_dir, opt.patch_size, opt.jpeg_quality,transforms=transforms_train)
     dataloader = DataLoader(dataset=dataset,
                             batch_size=opt.batch_size,
@@ -70,21 +72,22 @@ if __name__ == '__main__':
                             num_workers=opt.threads,
                             pin_memory=True,
                             drop_last=True)
-
-    vgg = vgg16(pretrained=True).cuda()
-    loss_network = nn.Sequential(*list(vgg.features)[:31]).eval()
-    for param in loss_network.parameters():
-        param.requires_grad = False
+    print("Data loading completed")
+    #vgg = vgg16(pretrained=True).cuda()
+    #loss_network = nn.Sequential(*list(vgg.features)[:31]).eval()
+#     for param in loss_network.parameters():
+#         param.requires_grad = False
 
     for epoch in range(opt.num_epochs):
         epoch_losses = AverageMeter()
-
+        print("Length of the dataset is", len(dataset))
         with tqdm(total=(len(dataset) - len(dataset) % opt.batch_size)) as _tqdm:
             _tqdm.set_description('epoch: {}/{}'.format(epoch + 1, opt.num_epochs))
             for data in dataloader:
                 inputs, labels = data
                 inputs = inputs.to(device)
                 labels = labels.to(device)
+                #print(inputs.size(), labels.size())
 
                 outs = model(inputs)
 
